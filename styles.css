@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ccd3d3;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .card-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .card-body ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .card-body ul li {
+    margin-bottom: 10px;
+  }
+  
+  .card-body {
+    font-size: 1.1rem;
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  header h1 {
+    font-size: 2.8rem;
+    margin: 0;
+  }
+  
+  /* Card Styling */
+  .card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: #5e6063;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    background-color: #ebf3fa;
+    padding: 30px;
+  }
+  
+  /* Photo Gallery Styles */
+  .card-img-top {
+    border-radius: 5px;
+    width: auto; /* Keep the original image width */
+    height: auto; /* Keep the original image height */
+    max-width: 100%; /* Ensure the image doesn't overflow the container */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .card-img-top:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    background-color: rgba(177, 187, 198, 0.2); /* Light blue background */
+  }
+  
+  .row {
+    margin-top: 20px;
+    justify-content: center; /* Align photos in the center */
+  }
+  
+  .col-md-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative; /* To position overlay for hover effect */
+    text-align: center; /* Center images in the column */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .col-md-4 .card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .col-md-4 .card-img-top {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  .col-md-4 .card:hover .card-img-top {
+    transform: scale(1.05);
+    opacity: 0.85;
+  }
+  
+  .col-md-4 .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Gallery Container */
+  .card-body .row {
+    width: 100%; /* Adjust the width of the photo gallery container */
+    margin: 0 auto; /* Center the container */
+    background-color: rgba(115, 125, 135, 0.2); /* Light blue background */
+
+  }
+  
+  .card-body {
+    padding: 15px;
+    padding-top: 0; /* Remove extra padding from the top */
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 767px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    .card-header h2 {
+      font-size: 1.2rem;
+    }
+  
+    .card-body {
+      font-size: 1rem;
+    }
+  
+    /* Resize the photo gallery for smaller screens */
+    .card-body .row {
+      width: 90%; /* Make the container wider on smaller screens */
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .col-md-4 {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  
